@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">												<!-- Using Unicode character set  -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"> <!-- Set a mobile-friendly viewport -->
+  <meta name="apple-mobile-web-app-capable" content="yes">				<!-- Set an Apple device mobile-friendly web app -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">	<!-- Part of above. -->
+  
+  <title></title>														<!-- No Title necessary because <h1> below fills it in as necessary -->
+  
+  <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">			<!-- Accessing the jQuery Mobile Stylesheet -->
+  <link rel="stylesheet" href="codiqa.ext.css">							<!-- Our custom CSS file (originally from codiqa.com -->
+ 
+</head>
+<body>
+<!-- Home Screen START -->
+<section data-role="page" id="home">									<!-- data-role="page" defines a screenful of content -->
+    <header data-role="header">											<!-- data-role="header" defines the header at the top of the screen -->
+        <h1>
+            mySDCE
+        </h1>
+        <nav data-role="navbar" data-iconpos="top">							<!-- data-role="navbar" defines the navigation bar element -->
+            <ul>
+                <li>
+                    <a href="#home" data-transition="flip" data-icon="home"	
+                    class="ui-btn-active ui-state-persist">					<!-- data-transition="flip" defines a page-to-page transition (withint THIS document) -->
+																			<!-- Makes the current button look like it's active -->
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#art" data-transition="flip" data-icon="edit">
+                        Art
+                    </a>
+                </li>
+                <li>
+                    <a href="#computers" data-transition="flip" data-icon="gear">
+                        Computers
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article role="main" class="ui-content">			<!-- The main content area of this screen -->
+        <h2>
+            Welcome<span class="welcomeMsg"></span>		<!-- class="welcomeMsg" used for displaying the User's name if they Customize the app -->
+        </h2>
+        <div class="divImgFull">						<!-- class="divImgFull" used to style the graphic's container nicely -->
+            <img src="images/autocampaign.jpg" alt="Our Automotive Major" class="imgFull">	<!-- class="imgFull" used to style the graphic, itself -->
+        </div>
+     
+        <div class="ui-grid-a">			<!-- A jQuery Mobile element that creates a grid. This one is 2 rows, 2 columns -->
+            <div class="ui-block-a">
+				<a href="#about" data-role="button" data-icon="info" data-transition="pop">About</a>	<!-- Along with the data-dialog="true" property, this creates a "Dialog Box" pop up -->
+            </div>
+            <div class="ui-block-b">
+				
+            </div>
+            <div class="ui-block-a">
+				
+            </div>
+            <div class="ui-block-b">
+				
+            </div>
+        </div>
+    </article>
+    <footer  data-role="footer" data-position="fixed">	<!-- data-role="footer" defines the footer element, at the bottom of the screen, and fixes it there -->
+        <h4>
+            Copyright &copy; 2016 VmC Apps, LLC.		<!-- Fake company is fake -->
+        </h4>
+    </footer>
+</section>
+<!-- Home Screen END -->
+
+<!-- Art Screen START -->
+<section data-role="page" id="art">
+	<aside data-role="panel" data-display="overlay" id="artCal">												<!-- <aside> HTML5 element and data-role="panel" jQuery Mobile used to create a side panel -->
+		<a href="#art" data-rel="close" data-role="button" data-icon="carat-l" data-iconpos="notext">Close</a>	<!-- Redundant close button, for Usability -->
+		<h1>Art Calendar</h1>
+		<h2>May</h2>
+			<ul>
+				<li>Student Art Show</li>
+				<li>May Flower Sale</li>
+			</ul>
+		<h2>June</h2>
+			<ul>
+				<li>Faculty Art Show</li>
+			</ul>
+		<h2>July</h2>
+			<ul>
+				<li>Community Art Show</li>
+				<li>Dance Recital</li>
+			</ul>
+	</aside>
+    <header data-role="header">
+        <h1>
+            Art Classes
+        </h1>
+        <nav data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="flip" data-icon="home"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#art" data-transition="flip" data-icon="edit"
+					class="ui-btn-active ui-state-persist">
+                        Art
+                    </a>
+                </li>
+                <li>
+                    <a href="#computers" data-transition="flip" data-icon="gear">
+                        Computers
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article role="main" class="ui-content">
+        <h2>
+            Learn Art<span class="welcomeMsg"></span>
+        </h2>
+		<div data-role="collapsible-set">							<!-- data-role="collapsible-set" defines a jQuery Mobile Collapsible set -->
+            <div data-role="collapsible" data-collapsed="true">		<!-- data-role="collapsible" defines each "drawer" that can be opened -->
+                <h3>
+                    ART101
+                </h3>
+				box 1
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    ART102
+                </h3>
+				box 2
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    ART103
+                </h3>
+				box 3
+            </div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>
+					ART104
+				</h3>
+				<p>
+					Box 4
+				</p>
+			</div>
+        </div>
+		<div class="ui-grid-a">
+            <div class="ui-block-a">
+				<a href="#artCal" data-role="button" data-icon="calendar">Calendar</a>														<!-- Display the Side Panel -->
+            </div>
+            <div class="ui-block-b">
+				<a href="http://sdce.edu/class-schedule" rel="external" target="_blank" data-role="button" data-icon="bars">Catalog</a>		<!-- Plain, old HTML to create an external Hyperlink. Note that rel="external" should be used; to 'break' us out of the SPA of this project -->
+            </div>
+            <div class="ui-block-a">
+				
+            </div>
+            <div class="ui-block-b">
+				
+            </div>
+        </div>
+    </article>
+    <footer  data-role="footer" data-position="fixed">
+        <h4>
+            Copyright &copy; 2016 VmC Apps, LLC.
+        </h4>
+    </footer>
+</section>
+<!-- Art Screen END -->
+
+<!-- Computers Screen START -->
+<section data-role="page" id="computers">
+    <header data-role="header">
+        <h1>
+            Computer Classes
+        </h1>
+        <nav data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="flip" data-icon="home"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#art" data-transition="flip" data-icon="edit"
+					>
+                        Art
+                    </a>
+                </li>
+                <li>
+                    <a href="#computers" data-transition="flip" data-icon="gear"
+					class="ui-btn-active ui-state-persist">
+                        Computers
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article role="main" class="ui-content">
+        <h2>
+            Learn Computers<span class="welcomeMsg"></span>
+        </h2>
+		<ul data-role="listview" data-inset="true">				<!-- data-role="listview" defines the Listview jQuery Mobile element -->
+            <li data-role="list-divider" role="heading">		<!-- data-role="list-divider" defines each 'header' row of the Listview element -->
+                Basic Computers
+            </li>
+            <li>
+                <a href="#comBas" data-transition="slide">		<!-- Each regular row of the Listview is an HTML List Item <li> -->
+                    COM101
+                </a>
+            </li>
+            <li>
+                <a href="#comBas" data-transition="slide">
+                    COM102
+                </a>
+            </li>
+            <li data-role="list-divider" role="heading">
+                Intermediate Computers
+            </li>
+            <li>
+                <a href="#comInt" data-transition="slide">
+                    COM201
+                    <span class="ui-li-count">					<!-- class="ui-li-count" defines the count bubble in the row -->
+                        7
+                    </span>
+                </a>
+            </li>
+			<li data-role="list-divider" role="heading">
+				Advanced Computers
+			</li>
+			<li>
+				<a href="#comAdv" data-transition="slide">
+					COM301
+				</a>
+			</li>
+        </ul>
+    </article>
+    <footer  data-role="footer" data-position="fixed">
+        <h4>
+            Copyright &copy; 2016 VmC Apps, LLC.
+        </h4>
+    </footer>
+</section>
+<!-- Computers Screen END -->
+
+<!-- About Screen START -->
+<section data-role="page" data-dialog="true" id="about">	<!-- data-dialog="true" sets up this screen as a "Dialog Box" that pops up -->
+	<header data-role="header">
+		<h1>About SDCE</h1>
+	</header>
+	<article role="main" class="ui-content">
+		<h2>Celebrating 100 Years</h2>
+		<div class="divImgFull">
+            <img src="images/vert-bw.png" alt="SDCE" class="imgFull">
+        </div>
+		<a href="m.html" rel="external" data-role="button" data-icon="navigation">Map</a>	<!-- Link to an external file, outside of the SPA of this file. -->
+		<a href="#" data-role="button" data-icon="user" id="btnName">Customize</a>			<!-- id="btnName" lets us use JavaScript to trigger this button to action -->
+	</article>
+</section>
+<!-- About Screen END -->
+
+<!-- Basic Computers Screen START -->						<!-- Placeholder section of the Basic Computers screen -->
+<section data-role="page" id="comBas">
+	<header data-role="header" data-add-back-btn="true">	<!-- data-add-back-btn="true" is an easy way to create a Back Button -->
+		<h1>Basic Computer Classes</h1>
+	</header>
+	<article role="main" class="ui-content">
+		<h2>lkadlkfjlkajdsf</h2>							<!-- Work in progress!  -->
+	</article>
+</section>
+<!-- Basic Computers Screen END -->
+  
+  
+  <script src="jquery-1.12.4.min.js"></script>			<!-- Reference to jQuery version 1.12.4 (needed for best compatibility with jQuery Mobile 1.4.5 -->
+  <script src="jquery.mobile-1.4.5.min.js"></script>	<!-- Reference to jQuery Mobile -->
+  <script src="codiqa.ext.js"></script>					<!-- Reference to our custom JavaScrip code -->
+  
+   <!--
+		Author:		Victor Campos <vcampos@sdccd.edu>
+		Project:	mySDCE
+		Version:	1.0.20160606
+		Date:		2016-06-06
+		Description:The unoffical San Diego Continuing Education app.
+  -->
+  
+</body>
+</html>

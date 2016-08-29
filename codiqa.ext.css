@@ -1,0 +1,19 @@
+.divImgFull {					/* Style a <div> that holds an <img> */
+	width: 100%; 				/* Make the <div> full-width */
+	position: relative; 		/* Position relative to the parent container */
+	background-color: white;	/* Background color set to white */
+	border: 5px solid white;	/* Add a 5-pixel size border, solid style, and white */
+	line-height: 0;				/* Zero out the Line Height to tighten the space */
+	border-radius: 25px;		/* Add a 25-pixel roundness to the <div> */
+	overflow: hidden;			/* Hide any content that extends beyond the <div> */
+}
+
+.imgFull { width: 100%;}			/* Make sure the <img> is 100% of the size of its container */
+
+/*
+	Author:		Victor Campos <vcampos@sdccd.edu>
+	Project:	mySDCE
+	Version:	1.0.20160606
+	Date:		2016-06-06
+	Description:The unoffical San Diego Continuing Education app.
+*/
